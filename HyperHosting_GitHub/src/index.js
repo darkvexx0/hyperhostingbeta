@@ -1,16 +1,15 @@
 require("dotenv").config();
 
 const http = require("node:http");
-
 const PORT = process.env.PORT || 3000;
-
 http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
   res.end("HyperHosting is online!");
 }).listen(PORT, "0.0.0.0", () => {
   console.log(`Web server running on port ${PORT}`);
 });
-const http = require("node:http");
+
+
 const {
   Client, GatewayIntentBits, Partials, Events, REST, Routes,
   SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle,
